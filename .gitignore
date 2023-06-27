@@ -1,0 +1,30 @@
+# Compiled Object files
+*.o
+
+# Compiled Dynamic Libraries
+*.so
+*.dll
+
+# Compiled Static Libraries
+*.a
+*.lib
+
+# Executables
+file_transfer
+file_transfer.exe
+
+# Visual Studio Code specific files
+.vscode/
+
+# Build directory
+build/
+
+# Windows specific files
+Thumbs.db
+Desktop.ini
+
+# Linux specific files
+.DS_Store
+
+# Other temporary or generated files
+*.swp
