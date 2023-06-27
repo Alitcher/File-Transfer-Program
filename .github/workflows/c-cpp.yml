@@ -11,11 +11,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up MSYS2
-      uses: actions/setup-msys2@v2
-    - name: Install build tools
-      run: pacman -S --noconfirm mingw-w64-x86_64-gcc
     - name: Build
       run: |
         cd src
