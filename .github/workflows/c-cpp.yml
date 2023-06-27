@@ -12,11 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: .\configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: Set up MSYS2 environment
+      uses: mattn/gom@v0.3
+      with:
+        msys2: x86_64
+    - name: Build
+      run: |
+        cd src
+        g++ main.cpp file_transfer.cpp -o file_transfer
