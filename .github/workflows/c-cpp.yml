@@ -17,4 +17,4 @@ jobs:
     - name: Build
       run: |
         cd src
-        g++ main.cpp file_transfer.cpp -o file_transfer
+        g++ -I../include main.cpp file_transfer.cpp -o file_transfer
