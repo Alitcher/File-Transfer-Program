@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up MSYS2 environment
-      uses: mattn/gom@v0.3
-      with:
-        msys2: x86_64
+    - name: Set up MSYS2
+      uses: actions/setup-msys2@v2
+    - name: Install build tools
+      run: pacman -S --noconfirm mingw-w64-x86_64-gcc
     - name: Build
       run: |
         cd src
